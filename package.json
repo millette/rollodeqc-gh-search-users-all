@@ -1,0 +1,44 @@
+{
+  "name": "rollodeqc-gh-search-users-all",
+  "version": "0.1.0",
+  "description": "RoLLodeQc module to search all GitHub users while respecting rate limits.",
+  "license": "AGPL-3.0",
+  "repository": "millette/rollodeqc-gh-search-users-all",
+  "readme": "readme.md",
+  "author": {
+    "name": "Robin Millette",
+    "email": "robin@millette.info",
+    "url": "robin.millette.info"
+  },
+  "engines": {
+    "node": ">=4.3.1"
+  },
+  "scripts": {
+    "test": "standard && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "rollodeqc",
+    "github",
+    "gh",
+    "utils",
+    "search",
+    "user",
+    "username",
+    "pagination"
+  ],
+  "dependencies": {
+    "rollodeqc-gh-bookworm": "^0.1.0",
+    "rollodeqc-gh-search-users": "^0.1.0"
+  },
+  "devDependencies": {
+    "ava": "^0.12.0",
+    "babel-eslint": "^6.0.0",
+    "standard": "^6.0.8"
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  }
+}
