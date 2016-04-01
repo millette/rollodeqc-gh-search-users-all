@@ -1,10 +1,9 @@
 {
   "name": "rollodeqc-gh-search-users-all",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "RoLLodeQc module to search all GitHub users while respecting rate limits.",
   "license": "AGPL-3.0",
   "repository": "millette/rollodeqc-gh-search-users-all",
-  "readme": "readme.md",
   "author": {
     "name": "Robin Millette",
     "email": "robin@millette.info",
@@ -30,8 +29,8 @@
     "pagination"
   ],
   "dependencies": {
-    "rollodeqc-gh-bookworm": "^0.1.0",
-    "rollodeqc-gh-search-users": "^0.1.0"
+    "rollodeqc-gh-bookworm": "^0.1.1",
+    "rollodeqc-gh-search-users": "^0.1.1"
   },
   "devDependencies": {
     "ava": "^0.12.0",
