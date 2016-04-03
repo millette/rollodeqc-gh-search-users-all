@@ -26,6 +26,8 @@ Type: `string`|`object`
 Otherwise see the tests and source code if query is an `object`.
 
 ## Dependencies
+* gh-user
+* lodash.sorteduniqby
 * rollodeqc-gh-bookworm
 * rollodeqc-gh-search-users
 

@@ -19,8 +19,41 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 'use strict'
 
+// npm
+const ghUser = require('gh-user')
+const sortedUniqBy = require('lodash.sorteduniqby')
+
 // own
 const bookworm = require('rollodeqc-gh-bookworm')
 const searchUsers = require('rollodeqc-gh-search-users')
 
-module.exports = (query) => bookworm.bookworm(query, searchUsers)
+const tenPages = (query) => bookworm.bookworm(query, searchUsers)
+
+module.exports = (query) => {
+  if (typeof query === 'string' && query) {
+    query = { o: { string: query } }
+  } else if (typeof query !== 'object') {
+    return Promise.reject(new Error('`query` required (string or object)'))
+  }
+  if (!query.order) { query.order = 'asc' }
+  if (!query.sort) { query.sort = 'joined' }
+
+  const methods = {
+    updateItems: (result, inner) => {
+      inner.items = sortedUniqBy(result.items.concat(inner.items), 'id')
+      return inner
+    },
+    nextLink: (result) => {
+      return ghUser(result.items[result.items.length - 1].login)
+        .then((user) => {
+          if (!user.created_at) { return false }
+          const c = '>=' + user.created_at
+          if (query.o.created === c) { return false }
+          query.o.created = c
+          delete query.q
+          return query
+        })
+    }
+  }
+  return bookworm.bookworm(query, tenPages, methods)
+}

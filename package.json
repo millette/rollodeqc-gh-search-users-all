@@ -29,7 +29,8 @@
     "pagination"
   ],
   "dependencies": {
-    "rollodeqc-gh-bookworm": "^0.1.1",
+    "gh-user": "^2.1.0",
+    "rollodeqc-gh-bookworm": "^0.2.0",
     "rollodeqc-gh-search-users": "^0.1.1"
   },
   "devDependencies": {
