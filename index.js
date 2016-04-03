@@ -44,6 +44,7 @@ module.exports = (query) => {
       return inner
     },
     nextLink: (result) => {
+      if (!result.items.length) { return Promise.resolve(false) }
       return ghUser(result.items[result.items.length - 1].login)
         .then((user) => {
           if (!user.created_at) { return false }
