@@ -3,6 +3,12 @@
 import test from 'ava'
 import fn from './'
 
+test('no results', async t => {
+  const result = await fn('joliette')
+  t.is(result.headers.statusCode, 200)
+  t.is(result.items.length, 0)
+})
+
 test('test #1', async t => {
   const result = await fn('bobby')
   t.is(result.headers.statusCode, 200)
