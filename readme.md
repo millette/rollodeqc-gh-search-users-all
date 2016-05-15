@@ -1,4 +1,7 @@
-# rollodeqc-gh-search-users-all [![Build Status](https://travis-ci.org/millette/rollodeqc-gh-search-users-all.svg?branch=master)](https://travis-ci.org/millette/rollodeqc-gh-search-users-all) [![Coverage Status](https://coveralls.io/repos/github/millette/rollodeqc-gh-search-users-all/badge.svg?branch=master)](https://coveralls.io/github/millette/rollodeqc-gh-search-users-all?branch=master)
+# rollodeqc-gh-search-users-all
+[![Build Status](https://travis-ci.org/millette/rollodeqc-gh-search-users-all.svg?branch=master)](https://travis-ci.org/millette/rollodeqc-gh-search-users-all)
+[![Coverage Status](https://coveralls.io/repos/github/millette/rollodeqc-gh-search-users-all/badge.svg?branch=master)](https://coveralls.io/github/millette/rollodeqc-gh-search-users-all?branch=master)
+[![Dependency Status](https://gemnasium.com/badges/github.com/millette/rollodeqc-gh-search-users-all.svg)](https://gemnasium.com/github.com/millette/rollodeqc-gh-search-users-all)
 > RoLLodeQc module to search all GitHub users while respecting rate limits.
 
 ## Install

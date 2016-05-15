@@ -9,11 +9,10 @@ test('no results', async t => {
   t.is(result.items.length, 0)
 })
 
-// FIXME: hard on travis/github...
-test.skip('test #1', async t => {
-  const result = await fn('bobby')
+test('test #1', async t => {
+  const result = await fn('jérôme')
   t.is(result.headers.statusCode, 200)
-  t.true(result.items.length > 2400)
+  t.true(result.items.length > 300)
 })
 
 test('test #2', async t => {
@@ -26,6 +25,18 @@ test('test #2', async t => {
   t.is(result.headers.statusCode, 200)
   t.true(result.items.length > 200)
   t.true(result.items.length < 500)
+})
+
+test('orgs', async t => {
+  const result = await fn({
+    o: { location: 'montreal', type: 'org' },
+    order: 'asc',
+    sort: 'joined'
+  })
+  t.is(result.headers.statusCode, 200)
+  console.log(JSON.stringify(result, null, ' '))
+  t.true(result.items.length > 500)
+  t.true(result.items.length < 600)
 })
 
 test('no q', async t => await t.throws(fn(), '`query` required (string or object)'))
