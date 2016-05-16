@@ -3,19 +3,19 @@
 import test from 'ava'
 import fn from './'
 
-test('no results', async t => {
+test.serial('no results', async t => {
   const result = await fn('joliette')
   t.is(result.headers.statusCode, 200)
   t.is(result.items.length, 0)
 })
 
-test('test #1', async t => {
+test.serial('test #1', async t => {
   const result = await fn('jérôme')
   t.is(result.headers.statusCode, 200)
   t.true(result.items.length > 300)
 })
 
-test('test #2', async t => {
+test.serial('test #2', async t => {
   const nowISO = '>=' + new Date(Date.now() - 8640000000).toISOString()
   const result = await fn({
     o: { string: 'bobby', created: nowISO },
@@ -27,7 +27,7 @@ test('test #2', async t => {
   t.true(result.items.length < 500)
 })
 
-test('orgs', async t => {
+test.serial('orgs', async t => {
   const result = await fn({
     o: { location: 'montreal', type: 'org' },
     order: 'asc',
