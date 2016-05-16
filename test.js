@@ -34,7 +34,6 @@ test('orgs', async t => {
     sort: 'joined'
   })
   t.is(result.headers.statusCode, 200)
-  console.log(JSON.stringify(result, null, ' '))
   t.true(result.items.length > 500)
   t.true(result.items.length < 600)
 })

@@ -71,5 +71,4 @@ searchUsers(query)
   })
   .catch((e) => {
     console.error('err:', e)
-    running = false
   })
