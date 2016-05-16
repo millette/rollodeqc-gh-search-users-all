@@ -25,27 +25,51 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // npm
 const meow = require('meow')
-// const omitBy = require('lodash.omitby')
 
 // self
 const searchUsers = require('./')
 
 const cli = meow([
   'Usage',
-  '  $ rollodeqc-gh-user [input]',
+  '  $ rollodeqc-gh-search-users-all [input]',
   '',
   'Options',
-  '  --foo  Lorem ipsum. [Default: false]',
+  '  -t',
+  '  --type Use Specify "user" or "org", otherwise search for any.',
+  '',
+  '  -l',
+  '  --location Search location; supply as many times as needed.',
   '',
   'Examples',
-  '  $ rollodeqc-gh-user',
+  '  $ rollodeqc-gh-search-users-all',
   '  unicorns & rainbows',
-  '  $ rollodeqc-gh-user ponies',
+  '  $ rollodeqc-gh-search-users-all ponies',
   '  ponies & rainbows'
-])
+], {
+  alias: { t: 'type', l: 'location' },
+  string: ['type', 'location']
+})
 
-searchUsers(cli.input[0] || 'unicorns')
+var query = {
+  o: { string: cli.input.join(' ') },
+  order: 'asc',
+  sort: 'joined'
+}
+
+if (cli.flags.type) {
+  query.o.type = cli.flags.type
+}
+
+if (cli.flags.location) {
+  query.o.location = cli.flags.location
+}
+
+searchUsers(query)
   .then((x) => {
-    // ...
-    console.log(JSON.stringify(x, null, ' '))
+    console.log(JSON.stringify(x.items, null, ' '))
+    console.error(JSON.stringify(x.headers, null, ' '))
+  })
+  .catch((e) => {
+    console.error('err:', e)
+    running = false
   })
