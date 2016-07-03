@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-0 > 1 // see https://github.com/babel/babel-eslint/issues/163
 
 /*
 RoLLodeQc utility to fetch a single GitHub user.
@@ -25,6 +24,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // npm
 const meow = require('meow')
+const updateNotifier = require('update-notifier')
+
+updateNotifier({ pkg: require('./package.json') }).notify()
 
 // self
 const searchUsers = require('./')
