@@ -35,7 +35,7 @@
     "pagination"
   ],
   "dependencies": {
-    "gh-user": "^2.1.0",
+    "gh-user": "^2.2.0",
     "lodash.sorteduniqby": "^4.5.0",
     "meow": "^3.7.0",
     "rollodeqc-gh-bookworm": "^0.3.1",
