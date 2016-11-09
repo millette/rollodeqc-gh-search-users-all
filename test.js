@@ -15,12 +15,13 @@ test.serial('test #1', async t => {
 })
 
 test.serial('test #2', async t => {
-  const nowISO = '>=' + new Date(Date.now() - 8640000000).toISOString()
-  const result = await fn({
+  const nowISO = '>=' + new Date(Date.now() - 8640000000).toLocaleDateString()
+  const it = {
     o: { string: 'bobby', created: nowISO },
     order: 'asc',
     sort: 'joined'
-  })
+  }
+  const result = await fn(it)
   t.is(result.headers.statusCode, 200)
   t.true(result.items.length > 200)
   t.true(result.items.length < 500)
