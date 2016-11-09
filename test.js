@@ -16,6 +16,7 @@ test.serial('test #1', async t => {
 
 test.serial('test #2', async t => {
   const nowISO = '>=' + new Date(Date.now() - 8640000000).toLocaleDateString()
+  console.log('NOW', nowISO)
   const it = {
     o: { string: 'bobby', created: nowISO },
     order: 'asc',
