@@ -34,8 +34,8 @@ test.serial('orgs', async t => {
     sort: 'joined'
   })
   t.is(result.headers.statusCode, 200)
-  t.true(result.items.length > 500)
-  t.true(result.items.length < 600)
+  t.true(result.items.length > 550)
+  t.true(result.items.length < 650)
 })
 
 test('no q', async t => await t.throws(fn(), '`query` required (string or object)'))
