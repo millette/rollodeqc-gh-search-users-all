@@ -1,11 +1,6 @@
-
-
-
-
-
 {
   "name": "rollodeqc-gh-search-users-all",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "RoLLodeQc module to search all GitHub users while respecting rate limits.",
   "license": "AGPL-3.0",
   "repository": "millette/rollodeqc-gh-search-users-all",
@@ -47,9 +42,9 @@
     "rollodeqc-gh-search-users": "^0.2.3",
     "update-notifier": "^2.2.0"
   },
-
-  "was-stuff": { "ava": "0.19.1" },
-
+  "was-stuff": {
+    "ava": "0.19.1"
+  },
   "devDependencies": {
     "ava": "^0.22.0",
     "babel-eslint": "^7.2.3",
