@@ -42,9 +42,6 @@
     "rollodeqc-gh-search-users": "^0.2.3",
     "update-notifier": "^2.2.0"
   },
-  "was-stuff": {
-    "ava": "0.19.1"
-  },
   "devDependencies": {
     "ava": "^0.22.0",
     "babel-eslint": "^7.2.3",
