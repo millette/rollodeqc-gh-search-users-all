@@ -1,3 +1,8 @@
+
+
+
+
+
 {
   "name": "rollodeqc-gh-search-users-all",
   "version": "0.6.0",
@@ -42,12 +47,15 @@
     "rollodeqc-gh-search-users": "^0.2.3",
     "update-notifier": "^2.2.0"
   },
+
+  "was-stuff": { "ava": "0.19.1" },
+
   "devDependencies": {
-    "ava": "^0.19.1",
+    "ava": "^0.22.0",
     "babel-eslint": "^7.2.3",
     "coveralls": "^2.13.1",
-    "nyc": "^11.0.2",
-    "standard": "^10.0.2"
+    "nyc": "^11.1.0",
+    "standard": "^10.0.3"
   },
   "standard": {
     "parser": "babel-eslint"
