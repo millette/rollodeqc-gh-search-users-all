@@ -39,7 +39,7 @@ module.exports = (query) => {
   if (!query.sort) { query.sort = 'joined' }
 
   const methods = {
-    wait: () => 2000,
+    wait: () => 2500,
     updateItems: (result, inner) => {
       inner.items = sortedUniqBy(result.items.concat(inner.items), 'id')
       return inner
