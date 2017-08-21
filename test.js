@@ -3,7 +3,7 @@ import test from 'ava'
 import fn from './'
 
 test.serial('no results', async t => {
-  const result = await fn('joliette')
+  const result = await fn('ran8423dom')
   t.is(result.headers.statusCode, 200)
   t.is(result.items.length, 0)
 })
