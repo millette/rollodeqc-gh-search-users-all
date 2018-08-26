@@ -35,7 +35,7 @@
     "pagination"
   ],
   "dependencies": {
-    "gh-user": "millette/gh-user#05e77c97c2f442f9f88371b8d83022bd151ba859",
+    "gh-user": "millette/gh-user#c2698baac7391680526b46311132996f3e3205e5",
     "lodash.sorteduniqby": "^4.7.0",
     "meow": "^3.7.0",
     "rollodeqc-gh-bookworm": "^0.4.0",

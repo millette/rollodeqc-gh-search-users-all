@@ -1810,9 +1810,9 @@ gh-got@^8.0.0:
   dependencies:
     got "^9.1.0"
 
-gh-user@millette/gh-user#05e77c97c2f442f9f88371b8d83022bd151ba859:
+gh-user@millette/gh-user#c2698baac7391680526b46311132996f3e3205e5:
   version "3.0.0"
-  resolved "https://codeload.github.com/millette/gh-user/tar.gz/05e77c97c2f442f9f88371b8d83022bd151ba859"
+  resolved "https://codeload.github.com/millette/gh-user/tar.gz/c2698baac7391680526b46311132996f3e3205e5"
   dependencies:
     gh-got "^8.0.0"
 
