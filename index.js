@@ -46,7 +46,14 @@ module.exports = (query) => {
     },
     nextLink: (result) => {
       if (!result.items.length) { return Promise.resolve(false) }
-      return ghUser(result.items[result.items.length - 1].login)
+      return ghUser(result.items[result.items.length - 1].login, {
+        retry: {
+          retries: 5,
+          statusCodes: [
+            403, 408, 413, 429, 500, 502, 503, 504
+          ]
+        }
+      })
         .then((user) => {
           if (!user.created_at) { return false }
           const c = '>=' + user.created_at
