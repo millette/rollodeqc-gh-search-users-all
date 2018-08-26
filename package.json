@@ -15,7 +15,7 @@
   },
   "scripts": {
     "lint": "standard",
-    "test": "standard && nyc ava",
+    "test": "standard && nyc ava --no-power-assert",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "files": [
@@ -35,7 +35,7 @@
     "pagination"
   ],
   "dependencies": {
-    "gh-user": "^3.0.0",
+    "gh-user": "millette/gh-user#05e77c97c2f442f9f88371b8d83022bd151ba859",
     "lodash.sorteduniqby": "^4.7.0",
     "meow": "^3.7.0",
     "rollodeqc-gh-bookworm": "^0.4.0",
