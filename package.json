@@ -11,7 +11,7 @@
   },
   "bin": "cli.js",
   "engines": {
-    "node": ">=4"
+    "node": ">=8"
   },
   "scripts": {
     "lint": "standard",
@@ -37,19 +37,15 @@
   "dependencies": {
     "gh-user": "millette/gh-user#c2698baac7391680526b46311132996f3e3205e5",
     "lodash.sorteduniqby": "^4.7.0",
-    "meow": "^3.7.0",
+    "meow": "^5.0.0",
     "rollodeqc-gh-bookworm": "^0.4.0",
-    "rollodeqc-gh-search-users": "^0.2.3",
-    "update-notifier": "^2.2.0"
+    "rollodeqc-gh-search-users": "^0.3.0",
+    "update-notifier": "^2.5.0"
   },
   "devDependencies": {
-    "ava": "^0.22.0",
-    "babel-eslint": "^7.2.3",
-    "coveralls": "^2.13.1",
-    "nyc": "^11.1.0",
-    "standard": "^10.0.3"
-  },
-  "standard": {
-    "parser": "babel-eslint"
+    "ava": "^0.25.0",
+    "coveralls": "^3.0.2",
+    "nyc": "^12.0.2",
+    "standard": "^11.0.1"
   }
 }
