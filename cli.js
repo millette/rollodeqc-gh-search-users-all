@@ -31,23 +31,23 @@ updateNotifier({ pkg: require('./package.json') }).notify()
 // self
 const searchUsers = require('./')
 
-const cli = meow([
-  'Usage',
-  '  $ rollodeqc-gh-search-users-all [input]',
-  '',
-  'Options',
-  '  -t',
-  '  --type Use Specify "user" or "org", otherwise search for any.',
-  '',
-  '  -l',
-  '  --location Search location; supply as many times as needed.',
-  '',
-  'Examples',
-  '  $ rollodeqc-gh-search-users-all',
-  '  unicorns & rainbows',
-  '  $ rollodeqc-gh-search-users-all ponies',
-  '  ponies & rainbows'
-], {
+const cli = meow(`
+Usage
+  $ rollodeqc-gh-search-users-all [input]
+
+Options
+  -t
+  --type Use Specify "user" or "org", otherwise search for any.
+
+  -l
+  --location Search location; supply as many times as needed.
+
+Examples
+  $ rollodeqc-gh-search-users-all
+  unicorns & rainbows
+  $ rollodeqc-gh-search-users-all ponies
+  ponies & rainbows
+`, {
   alias: { t: 'type', l: 'location' },
   string: ['type', 'location']
 })
