@@ -38,4 +38,4 @@ test.serial('orgs', async t => {
   t.true(result.items.length < 1000)
 })
 
-test('no q', t => t.throws(fn(), '`query` required (string or object)'))
+test('no q', t => t.throwsAsync(fn(), '`query` required (string or object)'))
