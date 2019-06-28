@@ -40,12 +40,12 @@
     "meow": "^5.0.0",
     "rollodeqc-gh-bookworm": "^0.4.0",
     "rollodeqc-gh-search-users": "^0.3.0",
-    "update-notifier": "^2.5.0"
+    "update-notifier": "^3.0.0"
   },
   "devDependencies": {
-    "ava": "^1.0.1",
-    "coveralls": "^3.0.2",
-    "nyc": "^13.1.0",
+    "ava": "^2.1.0",
+    "coveralls": "^3.0.4",
+    "nyc": "^14.1.1",
     "standard": "^12.0.1"
   }
 }
