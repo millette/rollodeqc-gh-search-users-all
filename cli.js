@@ -75,4 +75,3 @@ searchUsers(query)
     console.error('err:', e)
   })
 
-// console.log(query)
