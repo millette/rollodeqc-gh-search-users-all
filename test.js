@@ -35,7 +35,7 @@ test.serial('orgs', async t => {
   })
   t.is(result.headers.statusCode, 200)
   t.true(result.items.length > 800)
-  t.true(result.items.length < 1000)
+  t.true(result.items.length < 1200)
 })
 
 test('no q', t => t.throwsAsync(fn(), '`query` required (string or object)'))
