@@ -24,7 +24,7 @@ test.serial('test #2', async t => {
   const result = await fn(it)
   t.is(result.headers.statusCode, 200)
   t.true(result.items.length > 200)
-  t.true(result.items.length < 500)
+  t.true(result.items.length < 800)
 })
 
 test.serial('orgs', async t => {
